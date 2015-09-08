@@ -16,12 +16,12 @@ import com.coolweather.app.model.S_City;
 
 public class Utility {
 	private static final String TAG = "Utility";
+
 	private Province province;
 	
 	static{
 		City city = new City();
-		City city = new City();City city = new City();
-		City city = new City();
+
 		Log.i("", "这里是测试代码,测试git提交");Log.i("", "这里是测试代码,测试git提交");Log.i("", "这里是测试代码,测试git提交");
 		Log.i("", "这里是测试代码,测试git提交");
 		Log.i("", "这里是测试代码,测试git提交2");
@@ -30,6 +30,7 @@ public class Utility {
 	{
 		province = new Province();
 	}
+
 	/**
 	 * 解析和处理服务器返回的省级数据
 	 * @param coolWeatherDB 数据库操作类	

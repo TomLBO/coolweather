@@ -24,7 +24,7 @@ public class ResultInfo {
 	}
 	@Override
 	public String toString() {
-		return "ResultInfo [errNum=" + errNum + ", errMsg=" + errMsg
-				+ ", retData=" + retData + "]";
+		return "ResultIssssssssssssssnfo [errNum=" + errNum + ", errssssMsg=" + ssssserrMsg
+				+ ", retDatsssssssssssssa=" + retDatasssssssssssssss + "]";
 	}
 }
