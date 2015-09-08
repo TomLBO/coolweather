@@ -16,6 +16,11 @@ import com.coolweather.app.model.S_City;
 
 public class Utility {
 	private static final String TAG = "Utility";
+	
+	static{
+		City city = new City();
+		Log.i("", "这里是测试代码,测试git提交");
+	}
 	/**
 	 * 解析和处理服务器返回的省级数据
 	 * @param coolWeatherDB 数据库操作类	
@@ -34,15 +39,6 @@ public class Utility {
 					coolWeatherDB.saveProvince(province);
 				}
 			}
-//			List<S_City> list = new ArrayList<S_City>();
-//			ResultInfo result = JSON.parseObject(response, ResultInfo.class);
-//			Log.i(TAG, result.toString());
-//			Log.i(TAG, "handleProvincesResponse");
-//			list = JSON.parseArray(result.getRetData(), S_City.class);
-//			Log.i(TAG, "---------------------------");
-//			Log.i(TAG, list.get(0).getName_cn());
-//			List<City> cities = CityService2Local(list);
-//			Log.i(TAG, cities.get(2).getCityName());
 			return true;
 		}
 		return false;
