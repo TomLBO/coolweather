@@ -11,7 +11,11 @@ import android.database.sqlite.SQLiteDatabase;
 import com.coolweather.app.model.City;
 import com.coolweather.app.model.County;
 import com.coolweather.app.model.Province;
-
+/**
+ * 数据库操作类
+ * @author BOB
+ *
+ */
 public class CoolWeatherDB {
 	/**
 	 * 数据库名
