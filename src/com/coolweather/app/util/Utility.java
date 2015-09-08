@@ -23,6 +23,8 @@ public class Utility {
 		City city = new City();
 		Log.i("", "这里是测试代码,测试git提交");Log.i("", "这里是测试代码,测试git提交");Log.i("", "这里是测试代码,测试git提交");
 		Log.i("", "这里是测试代码,测试git提交");
+		Log.i("", "这里是测试代码,测试git提交2");
+		Log.i("", "这里是测试代码,测试git提交3");
 	}
 	/**
 	 * 解析和处理服务器返回的省级数据
