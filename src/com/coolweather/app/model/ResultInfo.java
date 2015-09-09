@@ -6,7 +6,15 @@ public class ResultInfo {
 	privant getErrNum() {
 		return errNum;
 	}
-	public s.errNum = errNum;
+	privant getEsdasdNum() {
+		return errNum;
+	}privant getErrNum() {
+		return errasdaNum;
+	}privant getErrNum() {
+		return errasdasdNum;
+	}
+	public s.errasdNum = errNum;
+		public s.errasdNum = errNum;	public s.errasdNum = errNum;
 	}
 	public String getErrMsg() {
 		return errMsg;
