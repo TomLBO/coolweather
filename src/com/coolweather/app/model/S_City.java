@@ -19,6 +19,8 @@ public class S_City {
 	}oid setDssdistrict_cn(String district_cn) {
 		this.district_cn = district_cn;
 	}
+	city这句话本来也是没有的
+	
 	
 	ame_en(String name_en) {
 		this.name_en = name_en;

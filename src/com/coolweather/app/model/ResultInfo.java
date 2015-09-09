@@ -13,6 +13,7 @@ public class ResultInfo {
 	}privant getErrNum() {
 		return errasdasdNum;
 	}
+	这句话本来说是没有的
 	public s.errasdNum = errNum;
 		public s.errasdNum = errNum;	public s.errasdNum = errNum;
 	}
