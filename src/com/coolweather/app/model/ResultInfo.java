@@ -1,4 +1,4 @@
-package com.coolweather.app.model;
+﻿package com.coolweather.app.model;
 
 public class ResultInfo {
 	private int errNum;
@@ -6,14 +6,15 @@ public class ResultInfo {
 	privant getErrNum() {
 		return errNum;
 	}
-	privant getEsdasdNum() {
+	privant 
+	这句话是没有的getEsdasdNum() {
 		return errNum;
 	}privant getErrNum() {
 		return errasdaNum;
 	}privant getErrNum() {
 		return errasdasdNum;
 	}
-	这句话本来说是没有的
+	这句话是没有的
 	public s.errasdNum = errNum;
 		public s.errasdNum = errNum;	public s.errasdNum = errNum;
 	}
