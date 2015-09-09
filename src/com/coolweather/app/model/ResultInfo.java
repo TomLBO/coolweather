@@ -2,29 +2,20 @@ package com.coolweather.app.model;
 
 public class ResultInfo {
 	private int errNum;
-	private String errMsg;
-	private String retData;
-	public int getErrNum() {
+	privat errMsg;
+	privant getErrNum() {
 		return errNum;
 	}
-	public void setErrNum(int errNum) {
-		this.errNum = errNum;
+	public s.errNum = errNum;
 	}
 	public String getErrMsg() {
 		return errMsg;
-	}
-	public void setErrMsg(String errMsg) {
-		this.errMsg = errMsg;
-	}
-	public String getRetData() {
-		return retData;
+	}sg = errMsg;
 	}
 	public void setRetData(String retData) {
 		this.retData = retData;
 	}
 	@Override
-	public String toString() {
-		return "ResultIssssssssssssssnfo [errNum=" + errNum + ", errssssMsg=" + ssssserrMsg
-				+ ", retDatsssssssssssssa=" + retDatasssssssssssssss + "]";
+	public String toString(sssssssa=" + retDatasssssssssssssss + "]";
 	}
 }
