@@ -1,12 +1,22 @@
 package com.coolweather.app.util;
 
-import android.text.TextUtils;
-import android.util.Log;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.preference.PreferenceManager;
+import android.text.TextUtils;
+
+import com.alibaba.fastjson.JSON;
 import com.coolweather.app.db.CoolWeatherDB;
 import com.coolweather.app.model.City;
 import com.coolweather.app.model.County;
 import com.coolweather.app.model.Province;
+import com.coolweather.app.model.ResultInfo;
+import com.coolweather.app.model.WeatherInfo;
 
 public class Utility {
 	@SuppressWarnings("unused")
@@ -86,4 +96,30 @@ public class Utility {
 		return false;
 	}
 
+	/**
+	 * 解析服务器返回的数据,并将解析出来的数据存入本地
+	 * @param context		上下文
+	 * @param response		返回的数据
+	 */
+	public static void handleWeatherResponse(Context context, String response){
+//		WeatherInfo weatherInfo = JSON.parseObject(response, WeatherInfo.class);
+		ResultInfo resultInfo = JSON.parseObject(response, ResultInfo.class);
+		WeatherInfo weatherInfo = JSON.parseObject(resultInfo.getWeatherinfo(), WeatherInfo.class);
+		saveWeatherInfo(context, weatherInfo);
+	}
+
+	private static void saveWeatherInfo(Context context, WeatherInfo weatherInfo) {
+		SimpleDateFormat date = new SimpleDateFormat("yyyy年M月d日", Locale.CHINA);
+		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+		Editor edit = sharedPreferences.edit();
+		edit.putBoolean("city_selected", true);
+		edit.putString("city_name", weatherInfo.getCity());
+		edit.putString("weather_code", weatherInfo.getCityid() + "");
+		edit.putString("temp1", weatherInfo.getTemp1());
+		edit.putString("temp2", weatherInfo.getTemp2());
+		edit.putString("weather_desp", weatherInfo.getWeather());
+		edit.putString("publish_time", weatherInfo.getPtime());
+		edit.putString("current_date", date.format(new Date()));
+		edit.commit();
+	}
 }
