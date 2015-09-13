@@ -1,23 +1,17 @@
 package com.coolweather.app.util;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.text.TextUtils;
-import android.util.Log;
 
-import com.alibaba.fastjson.JSON;
 import com.coolweather.app.db.CoolWeatherDB;
 import com.coolweather.app.model.City;
 import com.coolweather.app.model.County;
 import com.coolweather.app.model.Province;
-import com.coolweather.app.model.ResultInfo;
-import com.coolweather.app.model.S_City;
 
 public class Utility {
+	@SuppressWarnings("unused")
 	private static final String TAG = "Utility";
 
-	private Province province;
+//	private Province province;
 	
 
 	/**
@@ -88,38 +82,6 @@ public class Utility {
 			return true;
 		}
 		return false;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/**
-	 * 蛋疼,没啥用..
-	 * @param list
-	 * @return
-	 */
-	private static List<City> CityService2Local(List<S_City> list) {
-		List<City> cities = new ArrayList<City>();
-		for (S_City sCity : list) {
-			City city = new City();
-			city.setId(sCity.getArea_id());
-			city.setCityName(sCity.getName_cn());
-			city.setCityCode(sCity.getArea_id()+"");
-//			city.setProvinceId(sCity.getProvince_cn());
-			cities.add(city);
-		}
-		return cities;
 	}
 
 }
