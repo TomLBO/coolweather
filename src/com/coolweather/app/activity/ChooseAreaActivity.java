@@ -73,31 +73,6 @@ public class ChooseAreaActivity extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.choose_area);
 		initView();
-		
-		
-//		String address = "http://apis.baidu.com/apistore/weatherservice/citylist?cityname=济南";
-//		HttpUtill.sendHttpRequest(address , new HttpCallbackListener() {
-//			
-//			@Override
-//			public void onStart(HttpURLConnection connection) {
-//				Log.i(TAG, "onStart");
-//				 connection.setRequestProperty("apikey",  "d571972fbbd9154ede50f4c310c32cc3");
-//			}
-//			
-//			@Override
-//			public void onFinish(String response) {
-//				Log.i(TAG, "onFinish");
-//				Log.i(TAG, response);
-//				Utility.handleProvincesResponse(null, response);
-//			}
-//			
-//			@Override
-//			public void onError(Exception e) {
-//				Log.e(TAG, e.toString());
-//			}
-//		});
-//		
-		
 	}
 
 	private void initView() {
@@ -168,7 +143,7 @@ public class ChooseAreaActivity extends Activity {
 	 */
 	protected void queryCounties() {
 		countyList = coolWeatherDB.loadCounties(selectedCity.getId());
-		if(countyList.size() < 0 ){
+		if(countyList.size() > 0 ){
 			dataList.clear();
 			for (County county : countyList) {
 				dataList.add(county.getCountyName());
@@ -185,7 +160,7 @@ public class ChooseAreaActivity extends Activity {
 		if(!TextUtils.isEmpty(code)){
 			address = "http://www.weather.com.cn/data/list3/city" + code + ".xml";
 		}else{
-			address = "http://www.weather.com.cn/data/list3/cit.xml";
+			address = "http://www.weather.com.cn/data/list3/city.xml";
 		}
 		showProgressDialog();
 		HttpUtill.sendHttpRequest(address, new HttpCallbackListener() {
@@ -234,7 +209,6 @@ public class ChooseAreaActivity extends Activity {
 					@Override
 					public void run() {
 						closeProgressDialog();
-						
 						Toast.makeText(ChooseAreaActivity.this, "加载失败", Toast.LENGTH_LONG).show();
 	
 					}

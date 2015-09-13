@@ -1,6 +1,7 @@
 package com.coolweather.app.util;
 
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.coolweather.app.db.CoolWeatherDB;
 import com.coolweather.app.model.City;
@@ -21,6 +22,7 @@ public class Utility {
 	 * @return				写入数据库是否成功
 	 */
 	public synchronized static boolean handleProvincesResponse(CoolWeatherDB coolWeatherDB, String response){
+//		Log.i(TAG, "response: " + response);
 		if(!TextUtils.isEmpty(response)){
 			String[] allProvinces = response.split(",");
 			if(allProvinces != null && allProvinces.length > 0){
@@ -54,8 +56,8 @@ public class Utility {
 				city.setCityName(array[1]);
 				city.setProvinceId(provinceId);
 				coolWeatherDB.saveCity(city);
-				return true;
 			}
+			return true;
 		}
 		return false;
 	}

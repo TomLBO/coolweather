@@ -33,6 +33,7 @@ public class HttpUtill {
 					}
 					reader.close();
 				} catch (Exception e) {
+					e.printStackTrace();
 					listener.onError(e);
 				}finally {
 					if(connection != null){
