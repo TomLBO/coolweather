@@ -95,7 +95,7 @@ public class WeatherActivity extends Activity {
 	 */
 	private void queryWeatherInfo(String weatehrCode){
 		String address = "http://www.weather.com.cn/data/cityinfo/" + weatehrCode + ".html";
-		queryFromServer(address, "weatehrCode");
+		queryFromServer(address, "weatherCode");
 	}
 	
 	private void queryFromServer(String address, final String type) {
